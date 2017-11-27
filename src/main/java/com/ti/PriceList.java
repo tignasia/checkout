@@ -30,16 +30,6 @@ public class PriceList {
         checkArgument(priceListItems != null, "Price list items cannot be null !");
         return new PriceList(ImmutableMap.copyOf(priceListItems));
     }
-/*
-
-    public static PriceList from(PriceList existingPriceList, Map<ShoppingItem, PriceItem> priceListItems) {
-        return new PriceList(ImmutableMap.<ShoppingItem, PriceItem>builder().putAll(existingPriceList.getItems()).putAll(priceListItems).build());
-    }
-
-    public static PriceList from(PriceList existingPriceList, ShoppingItem newShoppingItem, PriceItem newPriceItem) {
-        return new PriceList(ImmutableMap.<ShoppingItem, PriceItem>builder().putAll(existingPriceList.getItems()).putAll(ImmutableMap.of(newShoppingItem,newPriceItem)).build());
-    }
-*/
 
     /**
      * Calculates total price from shopping item based on number from units and pricing information.
